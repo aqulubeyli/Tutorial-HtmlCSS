@@ -42,6 +42,10 @@ li{
 	align-items: center;
 }
 
+.logo h1 a{
+    text-decoration: none;
+}
+
 .logo a:hover{
 	color: tomato;
 }
@@ -51,74 +55,4 @@ li{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-
-/*side menu right*/
-.navigation{
-	height: 100vh;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	right: 0;
-	background-color: #adafb3;
-	overflow-x: hidden;
-	padding-top: 60px;
-	transition: 0.5s;
-}
-
-.navigation a{
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-	color: white;
-	font-size: 20px;
-	font-family: Arial, Helvetica, sans-serif;
-        display: block;
-        transition: 0.3s
-}
-
-/*side menu right*/
-.navigation a:hover,
-.offcanvas a:focus {
-	color: tomato;
-        transition: 0.3s
-}
-
-.navigation .closebtn{
-	position: absolute;
-	top: 0;
-	right: 150x;
-	font-size: 36px;
-	margin-left: 10px;
-}
-
-/*
-.navigation li{
-	padding-bottom: 10px;
-}
-*/
-
-.openbtn{
-    font-size: 38px;
-    cursor: pointer; /*yoxlamaq lazimdir*/
-    background-color: #D1D6E3;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-}
-.openbtn:hover{
-
-    color: red;
-}
-
-.closebtn:hover{
-	color: red;
-}
-
-
-#main {
-    transition: margin-left .5s;
-    #padding: 20px;
-    background-color: yellow;
 }
