@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedPro</title>
-
+    <!-- Bootstrap style -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Bight menu style -->
+    <link rel="stylesheet" href="css/navigation.css ">
 </head>
 
 <style>
@@ -20,8 +22,13 @@
         height: auto;
     }
 
+    /* #medImg img{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    } */
+
     #info{
-        padding: 15px;
+        padding: 20px;
         width: 300px;
         height: auto;
         text-align: justify;
@@ -40,9 +47,15 @@
     }
 
     #btn-more:hover{
-        /* background-color: tomato; */
         background-color: rgb(14, 110, 89);
     }
+
+    #card-img{
+        width: auto;
+        height: 140px;
+    }
+
+
 </style>
 
 <body>
@@ -50,6 +63,16 @@
         <div class="container"> <a class="navbar-brand" href="#"> <i class="fa d-inline fa-lg fa-circle"></i> <b>Med<span style="color: red;">Pro</span></b> </a>
             <!-- MENYU -->
             <div class="menyu"><b style="color:white;">MENYU</b>
+                <nav class="navigation" id="burgerPanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <li class="navbar_menu"><a href="#">Haqqımızda</a></li>
+                    <li class="navbar_menu"><a href="#">Məhsullarəmız</a></li>
+                    <li class="navbar_menu"><a href="#">Tədbirlər</a></li>
+                    <li class="navbar_menu"><a href="#">Karyera</a></li>
+                    <li class="navbar_menu"><a href="#">Əlaqə</a></li>
+                </nav>
+                 <!-- onclick="openNav()" -->
+                <button class="openbtn" id="nav-toggle" onclick="openNav()">&#9776;</button>
             </div>
         </div>
     </nav>
@@ -69,7 +92,7 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Maiores libero sit, laudantium perspiciatis nesciunt consequuntur
                     </p>
-                    <button type="button" class="btn btn-primary" id="btn-more">Daha ətrafli</button>
+                    <button type="button" class="btn btn-primary" id="btn-more">Daha ətrafli »</button>
                 </div>
                 <div class="col-4">
                     <img src="assets/img/img3.png" class="d-block" alt="img"> 
@@ -88,10 +111,10 @@
                         animi saepe mollitia corrupti necessitatibus odio reiciendis quaerat
                         labore voluptate itaque tenetur repellat porro vitae!
                     </p>
-                    <button type="button" class="btn btn-primary" id="btn-more">Daha ətrafli</button>
+                    <button type="button" class="btn btn-primary" id="btn-more">Daha ətrafli »</button>
                 </div>
-                <div class="col-4">
-                    <img src="assets/img/img1.png" class="d-block" alt="img"> 
+                <div class="col-4" id="medImg">
+                    <img src="assets/img/img1.png" class="d-block" alt="img" > 
                 </div>
                 <div class="col-2"></div>
             </div>
@@ -107,7 +130,7 @@
                         animi saepe mollitia corrupti necessitatibus odio reiciendis quaerat
                         labore voluptate itaque tenetur repellat porro vitae!
                     </p>
-                    <button type="button" class="btn btn-primary" id="btn-more">Daha ətrafli</button>
+                    <button type="button" class="btn btn-primary" id="btn-more">Daha ətrafli »</button>
                 </div>
                 <div class="col-4">
                     <img src="assets/img/img1.png" class="d-block" alt="img"> 
@@ -135,26 +158,30 @@
             </div>
             <div class="row">
                 <div class="col-6 col-lg-3 p-4"> 
-                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-1.jpg" width="200" alt="Card image cap"/>
+                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-2.jpg" width="200" alt="Card image cap" id="card-img"/>
                     <!-- <h4> <b>J. W. Goethe</b> </h4> -->
+                    <p class="small text-muted ">27/07/22</p>
                     <p class="mb-3">Lorem, ipsum dolor.</p>
                     <p class="mb-0">I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand.</p>
                 </div>
                 <div class="col-6 col-lg-3 p-4"> 
-                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-1.jpg" width="200" alt="Card image cap"/>
+                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-2.jpg" width="200" alt="Card image cap" id="card-img"/>
                     <!-- <h4> <b>G. W. John</b> </h4> -->
+                    <p class="small text-muted ">27/07/22</p>
                     <p class="mb-3">Lorem, ipsum dolor.</p>
                     <p class="mb-0">Then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul.</p>
                 </div>
                 <div class="col-6 col-lg-3 p-4"> 
-                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-1.jpg" width="200"/>
+                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-2.jpg" width="200" id="card-img"/>
                     <!-- <h4> <b>J. G. Wolf</b> </h4> -->
+                    <p class="small text-muted ">27/07/22</p>
                     <p class="mb-3">Lorem, ipsum dolor.</p>
                     <p class="mb-0"> I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater.</p>
                 </div>
                 <div class="col-6 col-lg-3 p-4"> 
-                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-1.jpg" width="200"/>
+                    <img class="img-fluid d-block mb-3 mx-auto" src="assets/card/cd-2.jpg" width="200" id="card-img"/>
                     <!-- <h4> <b>A. Gang</b> </h4> -->
+                    <p class="small text-muted ">27/07/22</p>
                     <p class="mb-3">Lorem, ipsum dolor.</p>
                     <p class="mb-0">Artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes.</p>
                 </div>
@@ -172,9 +199,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-6 p-3">
-                    <div class="card"> 
-                        <img class="card-img-top" src="assets/card/cd-1.jpg" alt="Card image cap"/>
+                    <div class="card" id="cardImg"> 
+                        <img class="card-img-top" src="assets/card/cd-3.jpeg" alt="Card image cap" id="card-img"/>
                         <div class="card-body">
+                            <p class="small text-muted ">27/07/22</p>
                             <h5 class="card-title"> <b>Lorem, ipsum dolor.</b> </h5>
                             <p class="card-text">Lorem, ipsum dolor.</p>
                         </div>
@@ -182,8 +210,9 @@
                 </div>
                 <div class="col-lg-3 col-6 p-3">
                     <div class="card"> 
-                        <img class="card-img-top" src="assets/card/cd-1.jpg" alt="Card image cap"/>
+                        <img class="card-img-top" src="assets/card/cd-3.jpg" alt="Card image cap" id="card-img"/>
                         <div class="card-body">
+                            <p class="small text-muted ">27/07/22</p>
                             <h5 class="card-title"> <b>Lorem, ipsum dolor.</b> </h5>
                             <p class="card-text">Lorem, ipsum dolor.</p>
                         </div>
@@ -191,8 +220,9 @@
                 </div>
                 <div class="col-lg-3 col-6 p-3">
                     <div class="card"> 
-                        <img class="card-img-top" src="assets/card/cd-1.jpg" alt="Card image cap"/>
+                        <img class="card-img-top" src="assets/card/cd-3.jpeg" alt="Card image cap" id="card-img"/>
                         <div class="card-body">
+                            <p class="small text-muted ">27/07/22</p>
                             <h5 class="card-title"> <b>Lorem, ipsum dolor.</b> </h5>
                             <p class="card-text">Lorem, ipsum dolor.</p>
                         </div>
@@ -200,8 +230,9 @@
                 </div>
                 <div class="col-lg-3 col-6 p-3">
                     <div class="card"> 
-                        <img class="card-img-top" src="assets/card/cd-1.jpg" alt="Card image cap"/>
+                        <img class="card-img-top" src="assets/card/cd-4.jpg" alt="Card image cap" id="card-img"/>
                         <div class="card-body">
+                            <p class="small text-muted ">27/07/22</p>
                             <h5 class="card-title"> <b>Lorem, ipsum dolor.</b> </h5>
                             <p class="card-text">Lorem, ipsum dolor.</p>
                         </div>
@@ -210,12 +241,28 @@
             </div>
         </div>
     </div>
+    <div class="py-3 text-center" style="background-color: white; background-size: 100%;" >
+        <div class="container">
+          <div class="row">
+            <div class="mx-auto p-4 col-md-7">
+              <h1 class="mb-4">Biznən əlaqə</h1>
+              <form>
+                <div class="form-group"> <input type="email" class="form-control" id="form33" placeholder="Email"> </div>
+                <div class="form-group"> <input type="text" class="form-control" id="form34" placeholder="Mövzu"> </div>
+                <div class="form-group"> <textarea class="form-control" id="form35" rows="3" placeholder="Sizin mesajiniz"></textarea> </div> 
+                <button type="submit" class="btn btn-outline-primary btn-block">Göndər</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
     <footer class="container">
         <div class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 mt-3 text-center">
-                        <p>© Copyright 2022 Aydin Qulubeyli.</p>
+                    <div class="col-md-12 mt-3" style="display: flex; justify-content: space-between;">
+                        <p>Copyright © 2022 MedPro MMC.</p>
+                        <!-- <p>Designet by Aydin Qulubeyli aydin.qulubeyli@mail.ru </p> -->
                     </div>
                 </div>
             </div>
@@ -223,8 +270,9 @@
     </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
