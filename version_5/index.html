@@ -58,6 +58,11 @@
         height: 140px;
     }
 
+    .card img:hover{
+        border-radius: 20px;
+        transform: scale(1.2);
+        transition: 0.3s
+    }
     /* MOBIL SETTINGS */
     @media only screen and (min-width: 900px) {
         #infoMediaContent{
@@ -79,16 +84,16 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <div class="container"> <a class="navbar-brand" href="#"> <i class="fa d-inline fa-lg fa-circle"></i> <b>Med<span style="color: red;">Pro</span></b> </a>
+        <div class="container"> <a class="navbar-brand" href="index.html"> <i class="fa d-inline fa-lg fa-circle"></i> <b>Med<span style="color: red;">Pro</span></b> </a>
             <!-- MENYU -->
             <div class="menyu"><b style="color:white;">MENYU</b>
                 <nav class="navigation" id="burgerPanel">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <li class="navbar_menu"><a href="#">Haqqımızda</a></li>
-                    <li class="navbar_menu"><a href="#">Məhsullarəmız</a></li>
-                    <li class="navbar_menu"><a href="#">Tədbirlər</a></li>
-                    <li class="navbar_menu"><a href="#">Karyera</a></li>
-                    <li class="navbar_menu"><a href="#">Əlaqə</a></li>
+                    <li class="navbar_menu"><a href="pages/about.html">Haqqımızda</a></li>
+                    <li class="navbar_menu"><a href="pages/products.html">Məhsullarəmız</a></li>
+                    <li class="navbar_menu"><a href="pages/events.html">Tədbirlər</a></li>
+                    <li class="navbar_menu"><a href="pages/career.html">Karyera</a></li>
+                    <li class="navbar_menu"><a href="pages/contact.html">Əlaqə</a></li>
                 </nav>
                  <!-- onclick="openNav()" -->
                 <button class="openbtn" id="nav-toggle" onclick="openNav()">&#9776;</button>
@@ -304,9 +309,9 @@
         <div class="container">
           <div class="row">
             <div class="mx-auto p-4 col-md-7">
-              <h1 class="mb-4">Biznən əlaqə</h1>
+              <h1 class="mb-4">Bizimlə əlaqə</h1>
               <form>
-                <div class="form-group"> <input type="text" class="form-control" id="form33" placeholder="Ad və soyadı"> </div>
+                <div class="form-group"> <input type="text" class="form-control" id="form33" placeholder="Ad və soyad"> </div>
                 <div class="form-group"> <input type="email" class="form-control" id="form33" placeholder="Email"> </div>
                 <div class="form-group"> <input type="text" class="form-control" id="form34" placeholder="Mövzu"> </div>
                 <div class="form-group"> <textarea class="form-control" id="form35" rows="3" placeholder="Sizin mesajiniz"></textarea> </div> 
